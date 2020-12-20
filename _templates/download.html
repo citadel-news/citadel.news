@@ -20,7 +20,6 @@ lin64: "x86_64-linux-gnu.tar.gz"
 {% if site.env.BITCOINORG_BUILD_TYPE %}
 <!-- Note: this file exempt from check-for-subheading-anchors check -->
 
-{% capture PATH_PREFIX %}/bin/bitcoin-core-{{ site.DOWNLOAD_VERSION }}{% endcapture %}
 {% capture FILE_PREFIX %}bitcoin-{{ site.DOWNLOAD_VERSION }}{% endcapture %}
 <link rel="alternate" type="application/rss+xml" href="/en/rss/releases.rss" title="Bitcoin Core releases">
 
@@ -56,10 +55,6 @@ lin64: "x86_64-linux-gnu.tar.gz"
       <p class="download-text">{% translate notelicense %}</p>
       
       <div class="downloadmore">
-        <a href="{{ PATH_PREFIX }}/SHA256SUMS.asc" class="dl core-link">{% translate downloadsig %}</a>
-        <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}.torrent" class="dl core-link">{% translate downloadtorrent %}</a>
-        {% if site.DOWNLOAD_MAGNETLINK %}
-        <a href="{{ site.DOWNLOAD_MAGNETLINK | replace: '&', '\&amp;'}}" class="magnetlink core-link" data-proofer-ignore></a>{% endif %}
         <a href="https://github.com/bitcoin/bitcoin" class="dl core-link">{% translate source %}</a>
         <a href="/en/version-history" class="core-link">{% translate versionhistory %}</a>
       </div>
@@ -77,29 +72,16 @@ lin64: "x86_64-linux-gnu.tar.gz"
       <p class="corecard-label">{% translate downloados %}</p>
 
         <div class="corecard windows-card">
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ page.win64exe }}" id="downloadwinexe">Windows</a>
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ page.win64exe }}" class="dl download-link" id="win64exe">exe</a>
-          <span> - </span>
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ page.win64zip }}" class="dl download-link" id="win64zip">zip</a>
         </div>
 
         <div class="corecard mac-card">
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}{{ page.macdmg }}">Mac OS X</a>
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}{{ page.macdmg }}" class="dl download-link" id="macdmg">dmg</a>
-          <span> - </span>
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ page.mactar }}" class="dl download-link" id="mactar">tar.gz</a>
         </div>
 
         <div class="corecard linux-card">
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ page.lin64 }}" id="downloadlin">Linux (tgz)</a>
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ page.lin64 }}" class="dl download-link" id="lin64">64 bit</a> 
         </div>
 
         <div class="corecard arm-card">
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-arm-linux-gnueabihf.tar.gz" class="dl">ARM Linux</a>
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-aarch64-linux-gnu.tar.gz" class="dl download-link" id="lin64arm">64 bit</a> 
           <span> - </span>
-          <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-arm-linux-gnueabihf.tar.gz" class="dl download-link" id="lin32arm">32 bit</a>
         </div>
 
         <div class="corecard snap-card">
