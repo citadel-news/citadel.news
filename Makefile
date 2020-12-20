@@ -63,7 +63,7 @@ post-build-tests-fast: check-for-build-errors ensure-each-svg-has-a-png check-fo
     check-for-missing-anchors check-for-broken-markdown-reference-links \
     check-for-broken-kramdown-tables check-for-duplicate-header-ids \
     check-for-headers-containing-auto-link check-for-missing-subhead-links \
-    check-for-empty-title-tag \
+    #check-for-empty-title-tag \
     check-for-subheading-anchors \
     check-jshint \
     check-for-javascript-in-svgs
