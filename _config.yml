@@ -562,7 +562,7 @@ aliases:
   saracen: Satoshi Nakamoto
   theuni: Cory Fields
 
-safe:        false
+safe: false
 port: 4000
 ## Used in older version of Jekyll
 base-url:    /
@@ -668,8 +668,8 @@ defaults:
       lang: en
       breadcrumbs:
         - bitcoin
-        - bcc
-        - bcc news
+        - btc
+        - btc news
         - RELEASE
   - scope:
       path: ""
